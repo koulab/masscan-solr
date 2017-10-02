@@ -1,4 +1,12 @@
 # masscan-solr
+masscan https://github.com/robertdavidgraham/masscan
+
+You must export as json
+```
+example:
+./bin/masscan -p80,443,3306,21,22 0.0.0.0/0 --rate 200000 --output-format json --output-filename any.json --output-status open --banners --source-port 60000 --excludefile exclude.txt
+```
+
 ```
 git clone https://github.com/39ff/masscan-solr
 php ./src/apache-solr/importJson.php
