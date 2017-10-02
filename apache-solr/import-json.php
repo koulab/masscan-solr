@@ -30,7 +30,8 @@ if(file_exists($argv[2])){
         }
     }while(!($ans !== 'yes' xor $ans !== 'no'));
 }
-if($ans === 'no'){ echo 'No changed.'.PHP_EOL; exit(-1); }
+
+if(!empty($ans) && $ans === 'no'){ echo 'No changed.'.PHP_EOL; exit(-1); }
 $r = fopen($argv[1],'r');
 $w = fopen($argv[2],'a+');
 
